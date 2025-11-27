@@ -1,0 +1,7 @@
+{
+  "name": "Python + Conda",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "conda activate dev"
+}
