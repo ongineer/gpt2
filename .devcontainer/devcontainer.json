@@ -1,11 +1,14 @@
 {
   "name": "Debian Slim + Conda + ML/LLM",
   "build": {
-      "dockerfile": "Dockerfile",
-      "context": ".."
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "WORKSPACE_FOLDER": "${workspaceFolder}"
+    }
   },
-  "features": {},
-  "postCreateCommand": "/tmp/setup_conda_env.sh",
+  "remoteUser": "opoudel",
+  "postCreateCommand": "git config --global --add safe.directory ${workspaceFolder} && WORKSPACE_FOLDER=${workspaceFolder} sh ${workspaceFolder}/.devcontainer/setup_conda_env.sh",
   "customizations": {
     "vscode": {
       "extensions": [
