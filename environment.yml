@@ -5,5 +5,10 @@ dependencies:
   - python=3.11
   - numpy
   - pandas
+  - scikit-learn
   - pytorch
   - transformers
+  - accelerate
+  - pip
+  - pip:
+      - bitsandbytes

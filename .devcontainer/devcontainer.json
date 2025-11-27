@@ -1,7 +1,17 @@
 {
-  "name": "Python + Conda + GH",
+  "name": "Debian Slim + Conda + ML/LLM",
   "build": {
-    "dockerfile": "Dockerfile"
+      "dockerfile": "Dockerfile",
+      "context": ".."
   },
-  "postCreateCommand": "conda env create -f environment.yml || conda activate dev"
+  "features": {},
+  "postCreateCommand": "/tmp/setup_conda_env.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
 }
