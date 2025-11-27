@@ -1,7 +1,7 @@
 {
-  "name": "Python + Conda",
+  "name": "Python + Conda + GH",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "conda activate dev"
+  "postCreateCommand": "conda env create -f environment.yml || conda activate dev"
 }
